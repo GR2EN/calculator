@@ -15,27 +15,28 @@ namespace Calculator
             ResultTextBox.Text = Convert.ToString(result);
         }
 
-        private void Addition(object sender, EventArgs e)
+        private void ButtonClickHandler(object sender, EventArgs e)
         {
-            var result = Convert.ToDouble(FirstOperandTextBox.Text) + Convert.ToDouble(SecondOperandTextBox.Text);
-            ResultOutput(result);
-        }
+            double result;
 
-        private void Substraction(object sender, EventArgs e)
-        {
-            var result = Convert.ToDouble(FirstOperandTextBox.Text) - Convert.ToDouble(SecondOperandTextBox.Text);
-            ResultOutput(result);
-        }
+            switch (((Button) sender).Name)
+            {
+                case "ButtonAddition":
+                    result = Convert.ToDouble(FirstOperandTextBox.Text) + Convert.ToDouble(SecondOperandTextBox.Text);
+                    break;
+                case "ButtonSubstraction":
+                    result = Convert.ToDouble(FirstOperandTextBox.Text) - Convert.ToDouble(SecondOperandTextBox.Text);
+                    break;
+                case "ButtonMultiplication":
+                    result = Convert.ToDouble(FirstOperandTextBox.Text) * Convert.ToDouble(SecondOperandTextBox.Text);
+                    break;
+                case "ButtonDivision":
+                    result = Convert.ToDouble(FirstOperandTextBox.Text) / Convert.ToDouble(SecondOperandTextBox.Text);
+                    break;
+                default:
+                    throw new Exception("Unknown operation");
+            }
 
-        private void Multiplication(object sender, EventArgs e)
-        {
-            var result = Convert.ToDouble(FirstOperandTextBox.Text) * Convert.ToDouble(SecondOperandTextBox.Text);
-            ResultOutput(result);
-        }
-
-        private void Division(object sender, EventArgs e)
-        {
-            var result = Convert.ToDouble(FirstOperandTextBox.Text) / Convert.ToDouble(SecondOperandTextBox.Text);
             ResultOutput(result);
         }
     }
