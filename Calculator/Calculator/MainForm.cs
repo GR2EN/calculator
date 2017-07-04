@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
+using Calculator.OneArgumentFactory;
+using Calculator.TwoArgumentFactory;
 
 namespace Calculator
 {
@@ -12,32 +15,24 @@ namespace Calculator
 
         private void ResultOutput(double result)
         {
-            ResultTextBox.Text = Convert.ToString(result);
+            ResultTextBox.Text = Convert.ToString(result, CultureInfo.InvariantCulture);
         }
 
-        private void ButtonClickHandler(object sender, EventArgs e)
+        private void TwoArgumentButtonClick(object sender, EventArgs e)
         {
-            double result;
+            double firstArgument = Convert.ToDouble(FirstOperandTextBox.Text);
+            double secondArgument = Convert.ToDouble(SecondOperandTextBox.Text);
+            ITwoArgumentsCalculator calculator =
+                TwoArgumentsFactory.CreateCalculatorByButtonName(((Button)sender).Name);
+            ResultOutput(calculator.Calculate(firstArgument, secondArgument));
+        }
 
-            switch (((Button) sender).Name)
-            {
-                case "ButtonAddition":
-                    result = Convert.ToDouble(FirstOperandTextBox.Text) + Convert.ToDouble(SecondOperandTextBox.Text);
-                    break;
-                case "ButtonSubstraction":
-                    result = Convert.ToDouble(FirstOperandTextBox.Text) - Convert.ToDouble(SecondOperandTextBox.Text);
-                    break;
-                case "ButtonMultiplication":
-                    result = Convert.ToDouble(FirstOperandTextBox.Text) * Convert.ToDouble(SecondOperandTextBox.Text);
-                    break;
-                case "ButtonDivision":
-                    result = Convert.ToDouble(FirstOperandTextBox.Text) / Convert.ToDouble(SecondOperandTextBox.Text);
-                    break;
-                default:
-                    throw new Exception("Unknown operation");
-            }
-
-            ResultOutput(result);
+        private void OneArgumentButtonClick(object sender, EventArgs e)
+        {
+            double argument = Convert.ToDouble(FirstOperandTextBox.Text);
+            IOneArgumentCalculator calculator =
+                OneArgumentFactory.OneArgumentFactory.CreateCalculatorByButtonName(((Button)sender).Name);
+            ResultOutput(calculator.Calculate(argument));
         }
     }
 }

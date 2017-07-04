@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Calculator
+namespace Calculator.TwoArgumentFactory
 {
     public class TwoArgumentsFactory
     {
-        public ITwoArgumentsCalculator CreateCalculatorByButtonName(string calculatorName)
+        public static ITwoArgumentsCalculator CreateCalculatorByButtonName(string calculatorName)
         {
             switch (calculatorName)
             {

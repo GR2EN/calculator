@@ -1,4 +1,4 @@
-﻿namespace Calculator
+﻿namespace Calculator.TwoArgumentFactory
 {
     public interface ITwoArgumentsCalculator
     {

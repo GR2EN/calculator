@@ -45,20 +45,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdditionCalculator.cs" />
-    <Compile Include="DivisionCalculator.cs" />
-    <Compile Include="ITwoArgumentsCalculator.cs" />
+    <Compile Include="OneArgumentFactory\CosinusCalculator.cs" />
+    <Compile Include="OneArgumentFactory\CotangensCalculator.cs" />
+    <Compile Include="OneArgumentFactory\IOneArgumentCalculator.cs" />
+    <Compile Include="OneArgumentFactory\OneArgumentFactory.cs" />
+    <Compile Include="OneArgumentFactory\SinusCalculator.cs" />
+    <Compile Include="OneArgumentFactory\TangensCalculator.cs" />
+    <Compile Include="TwoArgumentFactory\AdditionCalculator.cs" />
+    <Compile Include="TwoArgumentFactory\DivisionCalculator.cs" />
+    <Compile Include="TwoArgumentFactory\ITwoArgumentsCalculator.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MultiplyCalculator.cs" />
+    <Compile Include="TwoArgumentFactory\MultiplyCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SubstractionCalculator.cs" />
-    <Compile Include="TwoArgumentsFactory.cs" />
+    <Compile Include="TwoArgumentFactory\SubstractionCalculator.cs" />
+    <Compile Include="TwoArgumentFactory\TwoArgumentsFactory.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
