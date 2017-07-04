@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -15,6 +8,35 @@ namespace Calculator
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void ResultOutput(double result)
+        {
+            ResultTextBox.Text = Convert.ToString(result);
+        }
+
+        private void Addition(object sender, EventArgs e)
+        {
+            var result = Convert.ToDouble(FirstOperandTextBox.Text) + Convert.ToDouble(SecondOperandTextBox.Text);
+            ResultOutput(result);
+        }
+
+        private void Substraction(object sender, EventArgs e)
+        {
+            var result = Convert.ToDouble(FirstOperandTextBox.Text) - Convert.ToDouble(SecondOperandTextBox.Text);
+            ResultOutput(result);
+        }
+
+        private void Multiplication(object sender, EventArgs e)
+        {
+            var result = Convert.ToDouble(FirstOperandTextBox.Text) * Convert.ToDouble(SecondOperandTextBox.Text);
+            ResultOutput(result);
+        }
+
+        private void Division(object sender, EventArgs e)
+        {
+            var result = Convert.ToDouble(FirstOperandTextBox.Text) / Convert.ToDouble(SecondOperandTextBox.Text);
+            ResultOutput(result);
         }
     }
 }
