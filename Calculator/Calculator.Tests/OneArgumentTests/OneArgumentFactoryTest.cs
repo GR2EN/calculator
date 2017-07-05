@@ -1,5 +1,5 @@
 ﻿using System;
-using Calculator.OneArgumentFactory;
+using Calculator.OneArgument;
 using NUnit.Framework;
 
 namespace Calculator.Tests.OneArgumentTests
@@ -20,7 +20,7 @@ namespace Calculator.Tests.OneArgumentTests
         [TestCase("TangensButton", typeof(TangensCalculator))]
         public void CreateCalculatorByButtonNameTest(string calculatorName, Type type)
         {
-            var calculator = OneArgumentFactory.OneArgumentFactory.CreateCalculatorByButtonName(calculatorName);
+            var calculator = OneArgumentFactory.CreateCalculatorByButtonName(calculatorName);
             Assert.IsInstanceOf(type, calculator);
         }
     }

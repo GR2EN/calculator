@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calculator.OneArgumentFactory
+namespace Calculator.OneArgument
 {
     public class ExpCalculator : IOneArgumentCalculator
     {

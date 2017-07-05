@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Forms;
-using Calculator.OneArgumentFactory;
-using Calculator.TwoArgumentFactory;
+using Calculator.OneArgument;
+using Calculator.TwoArguments;
 
 namespace Calculator
 {
@@ -31,7 +31,7 @@ namespace Calculator
         {
             double argument = Convert.ToDouble(FirstOperandTextBox.Text);
             IOneArgumentCalculator calculator =
-                OneArgumentFactory.OneArgumentFactory.CreateCalculatorByButtonName(((Button)sender).Name);
+                OneArgumentFactory.CreateCalculatorByButtonName(((Button)sender).Name);
             ResultOutput(calculator.Calculate(argument));
         }
     }

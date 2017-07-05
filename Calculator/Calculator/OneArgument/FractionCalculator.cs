@@ -1,4 +1,4 @@
-﻿namespace Calculator.OneArgumentFactory
+﻿namespace Calculator.OneArgument
 {
     public class FractionCalculator : IOneArgumentCalculator
     {
