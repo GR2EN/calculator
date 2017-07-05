@@ -45,11 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OneArgumentFactory\AbsCalculator.cs" />
     <Compile Include="OneArgumentFactory\CosinusCalculator.cs" />
     <Compile Include="OneArgumentFactory\CotangensCalculator.cs" />
+    <Compile Include="OneArgumentFactory\CubeExpCalculator.cs" />
+    <Compile Include="OneArgumentFactory\ExpCalculator.cs" />
+    <Compile Include="OneArgumentFactory\FractionCalculator.cs" />
     <Compile Include="OneArgumentFactory\IOneArgumentCalculator.cs" />
+    <Compile Include="OneArgumentFactory\LnCalculator.cs" />
     <Compile Include="OneArgumentFactory\OneArgumentFactory.cs" />
     <Compile Include="OneArgumentFactory\SinusCalculator.cs" />
+    <Compile Include="OneArgumentFactory\SqrtCalculator.cs" />
+    <Compile Include="OneArgumentFactory\SquareExpCalculator.cs" />
     <Compile Include="OneArgumentFactory\TangensCalculator.cs" />
     <Compile Include="TwoArgumentFactory\AdditionCalculator.cs" />
     <Compile Include="TwoArgumentFactory\DivisionCalculator.cs" />
