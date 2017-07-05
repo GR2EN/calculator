@@ -6,7 +6,7 @@ namespace Calculator.OneArgument
     {
         public double Calculate(double argument)
         {
-            return Math.Pow(argument, 2);
+           return Math.Pow(argument, 2);
         }
     }
 }

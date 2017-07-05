@@ -6,6 +6,11 @@ namespace Calculator.OneArgument
     {
         public double Calculate(double argument)
         {
+            if (argument < 0)
+            {
+                throw new Exception("Value can't be negative");
+            }
+
             return Math.Log(argument);
         }
     }

@@ -1,4 +1,5 @@
-﻿using Calculator.OneArgument;
+﻿using System;
+using Calculator.OneArgument;
 using NUnit.Framework;
 
 namespace Calculator.Tests.OneArgumentTests
@@ -14,6 +15,14 @@ namespace Calculator.Tests.OneArgumentTests
             var tangensCalculator = new TangensCalculator();
             var actualResult = tangensCalculator.Calculate(argument);
             Assert.AreEqual(expected, actualResult, 0.0000000001);
+        }
+
+        [TestCase(Math.PI / 2)]
+        [TestCase(3 * Math.PI / 2)]
+        public void TangensExceptions(double argument)
+        {
+            var tangensCalculator = new TangensCalculator();
+            Assert.Throws<Exception>(() => tangensCalculator.Calculate(argument));
         }
     }
 }

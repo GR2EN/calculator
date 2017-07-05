@@ -1,4 +1,5 @@
-﻿using Calculator.OneArgument;
+﻿using System;
+using Calculator.OneArgument;
 using NUnit.Framework;
 
 namespace Calculator.Tests.OneArgumentTests
@@ -14,6 +15,13 @@ namespace Calculator.Tests.OneArgumentTests
             var sqrtCalculator = new SqrtCalculator();
             var actualResult = sqrtCalculator.Calculate(argument);
             Assert.AreEqual(expected, actualResult);
+        }
+
+        [TestCase(-1)]
+        public void ArgumentIsLessThanZero(double argument)
+        {
+            var calculator = new SqrtCalculator();
+            Assert.Throws<Exception>(() => calculator.Calculate(argument));
         }
     }
 }

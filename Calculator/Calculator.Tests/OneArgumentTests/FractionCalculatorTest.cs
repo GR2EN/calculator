@@ -1,4 +1,5 @@
-﻿using Calculator.OneArgument;
+﻿using System;
+using Calculator.OneArgument;
 using NUnit.Framework;
 
 namespace Calculator.Tests.OneArgumentTests
@@ -14,6 +15,13 @@ namespace Calculator.Tests.OneArgumentTests
             var fractionCalculator = new FractionCalculator();
             var actualResult = fractionCalculator.Calculate(argument);
             Assert.AreEqual(expected, actualResult);
+        }
+
+        [TestCase(0)]
+        public void ArgumentIsZero(double argument)
+        {
+            var calculator = new FractionCalculator();
+            Assert.Throws<Exception>(() => calculator.Calculate(argument));
         }
     }
 }
