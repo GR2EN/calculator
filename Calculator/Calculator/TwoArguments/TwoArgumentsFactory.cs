@@ -4,9 +4,14 @@ namespace Calculator.TwoArguments
 {
     public class TwoArgumentsFactory
     {
-        public static ITwoArgumentsCalculator CreateCalculatorByButtonName(string calculatorName)
+        /// <summary>
+        /// Gets an exemplar of inherit-class depending of button name
+        /// </summary>
+        /// <param name="buttonName">Button name</param>
+        /// <returns>Exemlar of inherit-class</returns>
+        public static ITwoArgumentsCalculator CreateCalculatorByButtonName(string buttonName)
         {
-            switch (calculatorName)
+            switch (buttonName)
             {
                 case "ButtonAddition":
                     return new AdditionCalculator();

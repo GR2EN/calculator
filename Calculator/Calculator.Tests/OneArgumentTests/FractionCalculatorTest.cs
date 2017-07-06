@@ -7,6 +7,11 @@ namespace Calculator.Tests.OneArgumentTests
     [TestFixture]
     public class FractionCalculatorTest
     {
+        /// <summary>
+        /// Testing method of calculation fraction of form 1/argument
+        /// </summary>
+        /// <param name="argument">Initial value</param>
+        /// <param name="expected">Expected result</param>
         [TestCase(1, 1)]
         [TestCase(0.5, 2)]
         [TestCase(5, 0.2)]

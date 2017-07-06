@@ -4,9 +4,14 @@ namespace Calculator.OneArgument
 {
     public class OneArgumentFactory
     {
-        public static IOneArgumentCalculator CreateCalculatorByButtonName(string calculatorName)
+        /// <summary>
+        /// Gets an exemplar of inherit-class depending of button name
+        /// </summary>
+        /// <param name="buttonName">Button name</param>
+        /// <returns>Exemlar of inherit-class</returns>
+        public static IOneArgumentCalculator CreateCalculatorByButtonName(string buttonName)
         {
-            switch (calculatorName)
+            switch (buttonName)
             {
                 case "SinusButton":
                     return new SinusCalculator();

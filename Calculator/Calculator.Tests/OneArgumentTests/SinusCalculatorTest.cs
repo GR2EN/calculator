@@ -6,6 +6,11 @@ namespace Calculator.Tests.OneArgumentTests
     [TestFixture]
     public class SinusCalculatorTest
     {
+        /// <summary>
+        /// Testing method of calculating sinus of argument
+        /// </summary>
+        /// <param name="argument">Initial value</param>
+        /// <param name="expected">Expected result</param>
         [TestCase(0, 0)]
         [TestCase(0.5, 0.4794255386)]
         [TestCase(1, 0.8414709848)]
