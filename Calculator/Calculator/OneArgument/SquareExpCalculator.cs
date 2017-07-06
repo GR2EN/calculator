@@ -5,10 +5,14 @@ namespace Calculator.OneArgument
     public class SquareExpCalculator : IOneArgumentCalculator
     {
         /// <summary>
-        /// Gets square power of argument
+        /// Gets square power of argument.
         /// </summary>
-        /// <param name="argument">Initial value</param>
-        /// <returns>Square power of argument</returns>
+        /// <param name="argument">
+        /// Initial value.
+        /// </param>
+        /// <returns>
+        /// Square power of argument <see cref="double"/>.
+        /// </returns>
         public double Calculate(double argument)
         {
            return Math.Pow(argument, 2);

@@ -5,10 +5,14 @@ namespace Calculator.TwoArguments
     public class TwoArgumentsFactory
     {
         /// <summary>
-        /// Gets an exemplar of inherit-class depending of button name
+        /// Gets an exemplar of inherit-class depending of button name.
         /// </summary>
-        /// <param name="buttonName">Button name</param>
-        /// <returns>Exemlar of inherit-class</returns>
+        /// <param name="buttonName">
+        /// Button name.
+        /// </param>
+        /// <returns>
+        /// Exemlar of inherit-class <see cref="ITwoArgumentsCalculator"/>.
+        /// </returns>
         public static ITwoArgumentsCalculator CreateCalculatorByButtonName(string buttonName)
         {
             switch (buttonName)
@@ -22,7 +26,7 @@ namespace Calculator.TwoArguments
                 case "ButtonDivision":
                     return new DivisionCalculator();
                 default:
-                    throw new Exception("Unknown calculator name");
+                    throw new Exception("Неизвестная операция.");
             }
         }
     }

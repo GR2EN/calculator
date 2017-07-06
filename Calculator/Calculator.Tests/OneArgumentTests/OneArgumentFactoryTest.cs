@@ -8,10 +8,14 @@ namespace Calculator.Tests.OneArgumentTests
     public class OneArgumentFactoryTest
     {
         /// <summary>
-        /// Testing an exemplar of inherit-class depending of button name
+        /// Testing an exemplar of inherit-class depending of button name.
         /// </summary>
-        /// <param name="buttonName">Button name</param>
-        /// <param name="type">Type of inherit-class</param>
+        /// <param name="buttonName">
+        /// Button name.
+        /// </param>
+        /// <param name="type">
+        /// Type of inherit-class.
+        /// </param>
         [TestCase("AbsButton", typeof(AbsCalculator))]
         [TestCase("CosinusButton", typeof(CosinusCalculator))]
         [TestCase("CotangensButton", typeof(CotangensCalculator))]
@@ -27,6 +31,18 @@ namespace Calculator.Tests.OneArgumentTests
         {
             var calculator = OneArgumentFactory.CreateCalculatorByButtonName(buttonName);
             Assert.IsInstanceOf(type, calculator);
+        }
+
+        /// <summary>
+        /// Testing create calculator by unknown operation name.
+        /// </summary>
+        /// <param name="buttonName">
+        /// Unknown operation name.
+        /// </param>
+        [TestCase("UnknownOperation")]
+        public void CreateCalculatorByUnknownOperationName(string buttonName)
+        {
+            Assert.Throws<Exception>(() => OneArgumentFactory.CreateCalculatorByButtonName(buttonName));
         }
     }
 }

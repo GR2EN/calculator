@@ -7,11 +7,17 @@ namespace Calculator.Tests.TwoArgumentsTests
     public class AdditionCalculatorTest
     {
         /// <summary>
-        /// Testing addition method
+        /// Testing addition method.
         /// </summary>
-        /// <param name="firstValue">First operand</param>
-        /// <param name="secondValue">Second operand</param>
-        /// <param name="expected">Result of operation</param>
+        /// <param name="firstValue">
+        /// First operand.
+        /// </param>
+        /// <param name="secondValue">
+        /// Second operand.
+        /// </param>
+        /// <param name="expected">
+        /// Result of operation.
+        /// </param>
         [TestCase(3, 4, 7)]
         [TestCase(1, 8, 9)]
         [TestCase(74, 6, 80)]

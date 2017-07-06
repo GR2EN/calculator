@@ -7,10 +7,14 @@ namespace Calculator.Tests.OneArgumentTests
     public class CubeExpCalculatorTest
     {
         /// <summary>
-        /// Testing method of calculating cube exponent of argument
+        /// Testing method of calculating cube exponent of argument.
         /// </summary>
-        /// <param name="argument">Initial value</param>
-        /// <param name="expected">Expected result</param>
+        /// <param name="argument">
+        /// Initial value.
+        /// </param>
+        /// <param name="expected">
+        /// Expected result.
+        /// </param>
         [TestCase(3, 27)]
         [TestCase(4, 64)]
         [TestCase(-5, -125)]

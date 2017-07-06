@@ -8,10 +8,14 @@ namespace Calculator.Tests.OneArgumentTests
     public class LnCalculatorTest
     {
         /// <summary>
-        /// 
+        /// Testing method of calculating natural logarifm of argument.
         /// </summary>
-        /// <param name="argument">Initial value</param>
-        /// <param name="expected">Expected result</param>
+        /// <param name="argument">
+        /// Initial value.
+        /// </param>
+        /// <param name="expected">
+        /// Expected result.
+        /// </param>
         [TestCase(1, 0)]
         [TestCase(3, 1.09861228867)]
         [TestCase(5, 1.60943791243)]
@@ -23,13 +27,14 @@ namespace Calculator.Tests.OneArgumentTests
         }
 
         /// <summary>
-        /// Testing exceptions
+        /// Testing exceptions.
         /// </summary>
         [Test]
         public void ArgumentIsNegative()
         {
             var lnCalculator = new LnCalculator();
-            Assert.Throws<Exception>(() => lnCalculator.Calculate(-2));
+            const double negativeValue = -2;
+            Assert.Throws<Exception>(() => lnCalculator.Calculate(negativeValue));
         }
     }
 }

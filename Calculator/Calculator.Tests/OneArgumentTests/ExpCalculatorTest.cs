@@ -6,10 +6,14 @@ namespace Calculator.Tests.OneArgumentTests
     public class ExpCalculatorTest
     {
         /// <summary>
-        /// Testing method of calculating exponent of argument
+        /// Testing method of calculating exponent of argument.
         /// </summary>
-        /// <param name="argument">Initial value</param>
-        /// <param name="expected">Expected result</param>
+        /// <param name="argument">
+        /// Initial value.
+        /// </param>
+        /// <param name="expected">
+        /// Expected result.
+        /// </param>
         [TestCase(0, 1)]
         [TestCase(0.5, 1.6487212707)]
         [TestCase(1, 2.71828182846)]

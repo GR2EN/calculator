@@ -8,10 +8,14 @@ namespace Calculator.Tests.OneArgumentTests
     public class CotangensCalculatorTest
     {
         /// <summary>
-        /// 
+        /// Testing of method cotangent calculating.
         /// </summary>
-        /// <param name="argument">Initial value</param>
-        /// <param name="expected">Expected result</param>
+        /// <param name="argument">
+        /// Initial value.
+        /// </param>
+        /// <param name="expected">
+        /// Expected result.
+        /// </param>
         [TestCase(0.5, 1.83048772171)]
         [TestCase(1, 0.64209261593)]
         public void CotangensOfArgumentAreEqualToExpected(double argument, double expected)
@@ -22,9 +26,11 @@ namespace Calculator.Tests.OneArgumentTests
         }
 
         /// <summary>
-        /// Testing exceptions
+        /// Testing exceptions.
         /// </summary>
-        /// <param name="argument">Exception values</param>
+        /// <param name="argument">
+        /// Exception values.
+        /// </param>
         [TestCase(0)]
         [TestCase(Math.PI)]
         public void CtgExceptions(double argument)

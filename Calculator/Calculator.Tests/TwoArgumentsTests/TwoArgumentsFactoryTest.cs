@@ -8,10 +8,14 @@ namespace Calculator.Tests.TwoArgumentsTests
     public class TwoArgumentsFactoryTest
     {
         /// <summary>
-        /// Testing method of creating a class
+        /// Testing method of creating a class.
         /// </summary>
-        /// <param name="buttonName">Button name</param>
-        /// <param name="type">Type of class</param>
+        /// <param name="buttonName">
+        /// Button name.
+        /// </param>
+        /// <param name="type">
+        /// Type of class.
+        /// </param>
         [TestCase("ButtonAddition", typeof(AdditionCalculator))]
         [TestCase("ButtonSubstraction", typeof(SubstractionCalculator))]
         [TestCase("ButtonMultiplication", typeof(MultiplyCalculator))]

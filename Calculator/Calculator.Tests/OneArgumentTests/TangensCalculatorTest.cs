@@ -8,10 +8,14 @@ namespace Calculator.Tests.OneArgumentTests
     public class TangensCalculatorTest
     {
         /// <summary>
-        /// Testing method of calculating tangent
+        /// Testing method of calculating tangent.
         /// </summary>
-        /// <param name="argument">Initial value</param>
-        /// <param name="expected">Expected result</param>
+        /// <param name="argument">
+        /// Initial value.
+        /// </param>
+        /// <param name="expected">
+        /// Expected result.
+        /// </param>
         [TestCase(0, 0)]
         [TestCase(0.5, 0.54630248984)]
         [TestCase(1, 1.55740772465)]
@@ -23,9 +27,11 @@ namespace Calculator.Tests.OneArgumentTests
         }
 
         /// <summary>
-        /// Testing exceptions
+        /// Testing exceptions.
         /// </summary>
-        /// <param name="argument">Initial value</param>
+        /// <param name="argument">
+        /// Initial value.
+        /// </param>
         [TestCase(Math.PI / 2)]
         [TestCase(3 * Math.PI / 2)]
         public void TangensExceptions(double argument)

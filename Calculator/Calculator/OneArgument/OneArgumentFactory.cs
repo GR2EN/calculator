@@ -5,10 +5,14 @@ namespace Calculator.OneArgument
     public class OneArgumentFactory
     {
         /// <summary>
-        /// Gets an exemplar of inherit-class depending of button name
+        /// Gets an exemplar of inherit-class depending of button name.
         /// </summary>
-        /// <param name="buttonName">Button name</param>
-        /// <returns>Exemlar of inherit-class</returns>
+        /// <param name="buttonName">
+        /// Button name.
+        /// </param>
+        /// <returns>
+        /// Exemlar of inherit-class <see cref="IOneArgumentCalculator"/>.
+        /// </returns>
         public static IOneArgumentCalculator CreateCalculatorByButtonName(string buttonName)
         {
             switch (buttonName)
@@ -36,7 +40,7 @@ namespace Calculator.OneArgument
                 case "AbsButton":
                     return new AbsCalculator();
                 default:
-                    throw new Exception("Unknown calculator name");
+                    throw new Exception("Неизвестная операция.");
             }
         }
     }

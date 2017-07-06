@@ -33,21 +33,6 @@
             this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.FirstOperandTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.FractionalButton = new System.Windows.Forms.Button();
             this.CubeExpButton = new System.Windows.Forms.Button();
             this.SquareExpButton = new System.Windows.Forms.Button();
@@ -63,8 +48,12 @@
             this.ButtonMultiplication = new System.Windows.Forms.Button();
             this.ButtonSubstraction = new System.Windows.Forms.Button();
             this.ButtonAddition = new System.Windows.Forms.Button();
+            this.CalculateModeGroupBox = new System.Windows.Forms.GroupBox();
+            this.TwoOperandsButton = new System.Windows.Forms.RadioButton();
+            this.OneOperandButton = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.CalculateModeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -77,66 +66,51 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 0, 5, 10);
-            this.groupBox1.Size = new System.Drawing.Size(309, 135);
+            this.groupBox1.Size = new System.Drawing.Size(237, 143);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // SecondOperandTextBox
             // 
-            this.SecondOperandTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.SecondOperandTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SecondOperandTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.SecondOperandTextBox.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SecondOperandTextBox.Location = new System.Drawing.Point(5, 55);
             this.SecondOperandTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.SecondOperandTextBox.Name = "SecondOperandTextBox";
-            this.SecondOperandTextBox.Size = new System.Drawing.Size(299, 35);
+            this.SecondOperandTextBox.Size = new System.Drawing.Size(227, 35);
             this.SecondOperandTextBox.TabIndex = 1;
             this.SecondOperandTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SecondOperandTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyHandler);
             // 
             // ResultTextBox
             // 
-            this.ResultTextBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.ResultTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ResultTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.ResultTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ResultTextBox.Enabled = false;
             this.ResultTextBox.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResultTextBox.Location = new System.Drawing.Point(5, 97);
+            this.ResultTextBox.Location = new System.Drawing.Point(5, 98);
             this.ResultTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.ResultTextBox.Name = "ResultTextBox";
             this.ResultTextBox.ReadOnly = true;
-            this.ResultTextBox.Size = new System.Drawing.Size(299, 28);
+            this.ResultTextBox.Size = new System.Drawing.Size(227, 35);
             this.ResultTextBox.TabIndex = 2;
             this.ResultTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FirstOperandTextBox
             // 
-            this.FirstOperandTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.FirstOperandTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FirstOperandTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.FirstOperandTextBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.FirstOperandTextBox.Font = new System.Drawing.Font("Segoe UI Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FirstOperandTextBox.Location = new System.Drawing.Point(5, 13);
             this.FirstOperandTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.FirstOperandTextBox.Name = "FirstOperandTextBox";
-            this.FirstOperandTextBox.Size = new System.Drawing.Size(299, 35);
+            this.FirstOperandTextBox.Size = new System.Drawing.Size(227, 35);
             this.FirstOperandTextBox.TabIndex = 0;
             this.FirstOperandTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.FirstOperandTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyHandler);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button25);
-            this.groupBox2.Controls.Add(this.button26);
-            this.groupBox2.Controls.Add(this.button27);
-            this.groupBox2.Controls.Add(this.button28);
-            this.groupBox2.Controls.Add(this.button29);
-            this.groupBox2.Controls.Add(this.button30);
-            this.groupBox2.Controls.Add(this.button17);
-            this.groupBox2.Controls.Add(this.button18);
-            this.groupBox2.Controls.Add(this.button19);
-            this.groupBox2.Controls.Add(this.button20);
-            this.groupBox2.Controls.Add(this.button21);
-            this.groupBox2.Controls.Add(this.button22);
-            this.groupBox2.Controls.Add(this.button23);
-            this.groupBox2.Controls.Add(this.button24);
-            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.FractionalButton);
             this.groupBox2.Controls.Add(this.CubeExpButton);
             this.groupBox2.Controls.Add(this.SquareExpButton);
@@ -152,153 +126,23 @@
             this.groupBox2.Controls.Add(this.ButtonMultiplication);
             this.groupBox2.Controls.Add(this.ButtonSubstraction);
             this.groupBox2.Controls.Add(this.ButtonAddition);
-            this.groupBox2.Location = new System.Drawing.Point(5, 142);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(0, 194);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox2.Size = new System.Drawing.Size(296, 368);
+            this.groupBox2.Size = new System.Drawing.Size(237, 249);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // button25
-            // 
-            this.button25.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button25.Location = new System.Drawing.Point(234, 304);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(50, 50);
-            this.button25.TabIndex = 29;
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // button26
-            // 
-            this.button26.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button26.Location = new System.Drawing.Point(234, 246);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(50, 50);
-            this.button26.TabIndex = 28;
-            this.button26.UseVisualStyleBackColor = true;
-            // 
-            // button27
-            // 
-            this.button27.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button27.Location = new System.Drawing.Point(234, 190);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(50, 50);
-            this.button27.TabIndex = 27;
-            this.button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            this.button28.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button28.Location = new System.Drawing.Point(234, 132);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(50, 50);
-            this.button28.TabIndex = 26;
-            this.button28.UseVisualStyleBackColor = true;
-            // 
-            // button29
-            // 
-            this.button29.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button29.Location = new System.Drawing.Point(234, 76);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(50, 50);
-            this.button29.TabIndex = 25;
-            this.button29.UseVisualStyleBackColor = true;
-            // 
-            // button30
-            // 
-            this.button30.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button30.Location = new System.Drawing.Point(234, 18);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(50, 50);
-            this.button30.TabIndex = 24;
-            this.button30.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button17.Location = new System.Drawing.Point(178, 304);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(50, 50);
-            this.button17.TabIndex = 23;
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button18.Location = new System.Drawing.Point(122, 304);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(50, 50);
-            this.button18.TabIndex = 22;
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button19.Location = new System.Drawing.Point(66, 304);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(50, 50);
-            this.button19.TabIndex = 21;
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button20.Location = new System.Drawing.Point(9, 304);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(50, 50);
-            this.button20.TabIndex = 20;
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button21.Location = new System.Drawing.Point(178, 246);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(50, 50);
-            this.button21.TabIndex = 19;
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button22.Location = new System.Drawing.Point(122, 246);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(50, 50);
-            this.button22.TabIndex = 18;
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // button23
-            // 
-            this.button23.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button23.Location = new System.Drawing.Point(66, 246);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(50, 50);
-            this.button23.TabIndex = 17;
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button24.Location = new System.Drawing.Point(9, 246);
-            this.button24.Margin = new System.Windows.Forms.Padding(5);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(50, 50);
-            this.button24.TabIndex = 16;
-            this.button24.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(178, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 15;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // FractionalButton
             // 
-            this.FractionalButton.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FractionalButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.FractionalButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.FractionalButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.FractionalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FractionalButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FractionalButton.ForeColor = System.Drawing.Color.Black;
             this.FractionalButton.Location = new System.Drawing.Point(122, 190);
             this.FractionalButton.Name = "FractionalButton";
             this.FractionalButton.Size = new System.Drawing.Size(50, 50);
@@ -309,7 +153,12 @@
             // 
             // CubeExpButton
             // 
+            this.CubeExpButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CubeExpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.CubeExpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.CubeExpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CubeExpButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CubeExpButton.ForeColor = System.Drawing.Color.Black;
             this.CubeExpButton.Location = new System.Drawing.Point(66, 190);
             this.CubeExpButton.Name = "CubeExpButton";
             this.CubeExpButton.Size = new System.Drawing.Size(50, 50);
@@ -320,7 +169,12 @@
             // 
             // SquareExpButton
             // 
+            this.SquareExpButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SquareExpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.SquareExpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.SquareExpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SquareExpButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SquareExpButton.ForeColor = System.Drawing.Color.Black;
             this.SquareExpButton.Location = new System.Drawing.Point(9, 190);
             this.SquareExpButton.Name = "SquareExpButton";
             this.SquareExpButton.Size = new System.Drawing.Size(50, 50);
@@ -331,7 +185,12 @@
             // 
             // AbsButton
             // 
+            this.AbsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AbsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.AbsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.AbsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AbsButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AbsButton.ForeColor = System.Drawing.Color.Black;
             this.AbsButton.Location = new System.Drawing.Point(178, 132);
             this.AbsButton.Name = "AbsButton";
             this.AbsButton.Size = new System.Drawing.Size(50, 50);
@@ -342,7 +201,12 @@
             // 
             // SqrtButton
             // 
+            this.SqrtButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SqrtButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.SqrtButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.SqrtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SqrtButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SqrtButton.ForeColor = System.Drawing.Color.Black;
             this.SqrtButton.Location = new System.Drawing.Point(122, 132);
             this.SqrtButton.Name = "SqrtButton";
             this.SqrtButton.Size = new System.Drawing.Size(50, 50);
@@ -353,7 +217,12 @@
             // 
             // LnButton
             // 
-            this.LnButton.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LnButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.LnButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.LnButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.LnButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LnButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LnButton.ForeColor = System.Drawing.Color.Black;
             this.LnButton.Location = new System.Drawing.Point(66, 132);
             this.LnButton.Name = "LnButton";
             this.LnButton.Size = new System.Drawing.Size(50, 50);
@@ -364,7 +233,12 @@
             // 
             // ExpButton
             // 
-            this.ExpButton.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExpButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ExpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.ExpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.ExpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExpButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExpButton.ForeColor = System.Drawing.Color.Black;
             this.ExpButton.Location = new System.Drawing.Point(9, 132);
             this.ExpButton.Margin = new System.Windows.Forms.Padding(5);
             this.ExpButton.Name = "ExpButton";
@@ -376,7 +250,12 @@
             // 
             // CotangensButton
             // 
-            this.CotangensButton.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CotangensButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CotangensButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.CotangensButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.CotangensButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CotangensButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CotangensButton.ForeColor = System.Drawing.Color.Black;
             this.CotangensButton.Location = new System.Drawing.Point(178, 76);
             this.CotangensButton.Name = "CotangensButton";
             this.CotangensButton.Size = new System.Drawing.Size(50, 50);
@@ -387,7 +266,12 @@
             // 
             // TangensButton
             // 
-            this.TangensButton.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TangensButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TangensButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.TangensButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.TangensButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TangensButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TangensButton.ForeColor = System.Drawing.Color.Black;
             this.TangensButton.Location = new System.Drawing.Point(122, 76);
             this.TangensButton.Name = "TangensButton";
             this.TangensButton.Size = new System.Drawing.Size(50, 50);
@@ -398,7 +282,12 @@
             // 
             // CosinusButton
             // 
-            this.CosinusButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CosinusButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CosinusButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.CosinusButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.CosinusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CosinusButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CosinusButton.ForeColor = System.Drawing.Color.Black;
             this.CosinusButton.Location = new System.Drawing.Point(66, 76);
             this.CosinusButton.Name = "CosinusButton";
             this.CosinusButton.Size = new System.Drawing.Size(50, 50);
@@ -409,7 +298,12 @@
             // 
             // SinusButton
             // 
-            this.SinusButton.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SinusButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SinusButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.SinusButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.SinusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SinusButton.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SinusButton.ForeColor = System.Drawing.Color.Black;
             this.SinusButton.Location = new System.Drawing.Point(9, 76);
             this.SinusButton.Name = "SinusButton";
             this.SinusButton.Size = new System.Drawing.Size(50, 50);
@@ -420,7 +314,12 @@
             // 
             // ButtonDivision
             // 
-            this.ButtonDivision.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonDivision.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ButtonDivision.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.ButtonDivision.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.ButtonDivision.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonDivision.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonDivision.ForeColor = System.Drawing.Color.Black;
             this.ButtonDivision.Location = new System.Drawing.Point(178, 18);
             this.ButtonDivision.Name = "ButtonDivision";
             this.ButtonDivision.Size = new System.Drawing.Size(50, 50);
@@ -431,7 +330,12 @@
             // 
             // ButtonMultiplication
             // 
-            this.ButtonMultiplication.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonMultiplication.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ButtonMultiplication.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.ButtonMultiplication.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.ButtonMultiplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonMultiplication.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonMultiplication.ForeColor = System.Drawing.Color.Black;
             this.ButtonMultiplication.Location = new System.Drawing.Point(122, 18);
             this.ButtonMultiplication.Name = "ButtonMultiplication";
             this.ButtonMultiplication.Size = new System.Drawing.Size(50, 50);
@@ -442,7 +346,12 @@
             // 
             // ButtonSubstraction
             // 
-            this.ButtonSubstraction.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonSubstraction.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ButtonSubstraction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.ButtonSubstraction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.ButtonSubstraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSubstraction.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonSubstraction.ForeColor = System.Drawing.Color.Black;
             this.ButtonSubstraction.Location = new System.Drawing.Point(66, 18);
             this.ButtonSubstraction.Name = "ButtonSubstraction";
             this.ButtonSubstraction.Size = new System.Drawing.Size(50, 50);
@@ -453,7 +362,12 @@
             // 
             // ButtonAddition
             // 
-            this.ButtonAddition.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonAddition.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ButtonAddition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.ButtonAddition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.ButtonAddition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAddition.Font = new System.Drawing.Font("Segoe UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtonAddition.ForeColor = System.Drawing.Color.Black;
             this.ButtonAddition.Location = new System.Drawing.Point(9, 18);
             this.ButtonAddition.Margin = new System.Windows.Forms.Padding(5);
             this.ButtonAddition.Name = "ButtonAddition";
@@ -463,11 +377,48 @@
             this.ButtonAddition.UseVisualStyleBackColor = true;
             this.ButtonAddition.Click += new System.EventHandler(this.TwoArgumentButtonClick);
             // 
+            // CalculateModeGroupBox
+            // 
+            this.CalculateModeGroupBox.Controls.Add(this.TwoOperandsButton);
+            this.CalculateModeGroupBox.Controls.Add(this.OneOperandButton);
+            this.CalculateModeGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CalculateModeGroupBox.Location = new System.Drawing.Point(0, 143);
+            this.CalculateModeGroupBox.Name = "CalculateModeGroupBox";
+            this.CalculateModeGroupBox.Size = new System.Drawing.Size(237, 51);
+            this.CalculateModeGroupBox.TabIndex = 2;
+            this.CalculateModeGroupBox.TabStop = false;
+            // 
+            // TwoOperandsButton
+            // 
+            this.TwoOperandsButton.AutoSize = true;
+            this.TwoOperandsButton.Checked = true;
+            this.TwoOperandsButton.Location = new System.Drawing.Point(122, 20);
+            this.TwoOperandsButton.Name = "TwoOperandsButton";
+            this.TwoOperandsButton.Size = new System.Drawing.Size(97, 17);
+            this.TwoOperandsButton.TabIndex = 1;
+            this.TwoOperandsButton.TabStop = true;
+            this.TwoOperandsButton.Text = "Два операнда";
+            this.TwoOperandsButton.UseVisualStyleBackColor = true;
+            this.TwoOperandsButton.CheckedChanged += new System.EventHandler(this.TwoOperandsOn);
+            // 
+            // OneOperandButton
+            // 
+            this.OneOperandButton.AutoSize = true;
+            this.OneOperandButton.Location = new System.Drawing.Point(13, 20);
+            this.OneOperandButton.Name = "OneOperandButton";
+            this.OneOperandButton.Size = new System.Drawing.Size(96, 17);
+            this.OneOperandButton.TabIndex = 0;
+            this.OneOperandButton.Text = "Один операнд";
+            this.OneOperandButton.UseVisualStyleBackColor = true;
+            this.OneOperandButton.CheckedChanged += new System.EventHandler(this.OneOperandOn);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 515);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(237, 443);
+            this.Controls.Add(this.CalculateModeGroupBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -477,6 +428,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.CalculateModeGroupBox.ResumeLayout(false);
+            this.CalculateModeGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -488,21 +441,6 @@
         private System.Windows.Forms.TextBox FirstOperandTextBox;
         private System.Windows.Forms.TextBox SecondOperandTextBox;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button FractionalButton;
         private System.Windows.Forms.Button CubeExpButton;
         private System.Windows.Forms.Button SquareExpButton;
@@ -518,6 +456,9 @@
         private System.Windows.Forms.Button ButtonMultiplication;
         private System.Windows.Forms.Button ButtonSubstraction;
         private System.Windows.Forms.Button ButtonAddition;
+        private System.Windows.Forms.GroupBox CalculateModeGroupBox;
+        private System.Windows.Forms.RadioButton TwoOperandsButton;
+        private System.Windows.Forms.RadioButton OneOperandButton;
     }
 }
 
